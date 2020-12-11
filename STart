@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Area och geometri</title>
+    
+    <style>
+      html
+      {
+        margin-left: 70px;
+        margin-top: 30px;
+        background-color: rgb(100,0,100);
+        color: rgb(0,200,150);
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+      }
+      .title
+      {
+        display: inline-block;
+        width: 140px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>Bosse Bus geometriberäknare</h1>
+    
+    <h2>Area på en kvadrat</h2>
+    <span class="title">Ange sidlängden:</span>
+    <input type="text" id="kvadratSida" />
+    <br />
+    <button onclick="calculateSquareArea()">Utför beräkning</button>
+    <div id="kvadratAreaSvar">Svar: </div>
+    
+     
+    
+    <h2>Area på en cirkel</h2>
+    <span class="title">Ange radien:</span>
+    <input type="text" id="cirkelRadie" />
+   <br />
+    <button onclick="calculateCircleArea()">Utför beräkning</button>
+    <div id="cirkelAreaSvar">Svar: </div>
+    
+    
+    <h2>Area på en rektangel</h2>
+    <span class="title">Ange en sidolängd:</span>
+    <input type="text" id="sida1" />
+    <br />
+    <span class="title">Ange den andra sidolängden:</span>
+    <input type="text" id="sida2" />
+    <br />
+       
+    <button onclick="calculateRektangelArea()">Utför beräkning</button>
+    <div id="rektangelSvar">Svar: </div>
+    
+    
+    <script>
+      
+      function calculateSquareArea()
+      {
+        var side = document.querySelector("#kvadratSida").value;
+        var area = sidan*sidan;
+        document.querySelector("#kvadratAreaSvar").innerHTML = "Svar: Arean blir "+area;
+      }
+          
+      
+      function calculateCircleArea()
+      {
+        var radius = document.querySelector("#cirkelRadie").value;
+        var area = radius*radius*Math.PI;
+        document.querySelector("#cirkelAreaSvar").innerHTML = "Svar: Arean blir "+area;
+      }
+      
+      
+      function calculateRektangelArea()
+      {
+        var sida1 = document.querySelector("#sida1").value;
+        var sida2 = document.querySelector("#sida2").value;
+        var area = sida1*sida2;
+        
+        document.querySelector("#rektangelSvar").innerHTML = "Svar: Arean blir "+area;
+      }
+          
+            
+    </script>
+    
+  </body>
+</html>
